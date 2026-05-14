@@ -15,12 +15,21 @@ Our work is based on the following excellent open-source projects:
 
 **NOTE:** Please follow the installation of [OBM](https://github.com/likaiucas/OBM).
 
+Our experimental environment: `PyTorch 1.13.1, CUDA 11.6, MMDetection 2.3.0`  
+
+Please refer to the `requirements.txt` file for the running environment of this code.
+
 
 ## Data Preparation
 
 * **The BONAI Dataset**: Please refer to the official link [jwwangchn/BONAI](https://github.com/jwwangchn/BONAI).
 * **The OmniCity-view3 Dataset**: Please refer to the official link [opendatalab/MLS-BRN](https://github.com/opendatalab/MLS-BRN.git).
 * **The Huizhou Test Set**: Please refer to the official link [likaiucas/OBM](https://github.com/likaiucas/OBM).
+
+
+## Model Checkpoints
+
+Coming soon.
 
 
 ## Train & Test
