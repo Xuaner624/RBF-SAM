@@ -15,7 +15,7 @@ Our work is based on the following excellent open-source projects:
 
 **NOTE:** Please follow the installation of [OBM](https://github.com/likaiucas/OBM).
 
-Our experimental environment: `PyTorch 1.13.1, CUDA 11.6, MMDetection 2.3.0`  
+Our basic experimental environment: `PyTorch 1.13.1, CUDA 11.6, MMDetection 2.3.0`  
 
 Please refer to the `requirements.txt` file for the running environment of this code.
 
