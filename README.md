@@ -2,7 +2,7 @@
 
 This is the implementation of the paper *RBF-SAM: Robust Building Footprint Extraction from Off-Nadir Remote Sensing Images via Segment Anything Model*.
 
-> **Note:** This repository is undergoing revisions, and our paper is currently under review. The complete code and pre-trained weights will be made available upon acceptance.
+> **Note:** This repository is undergoing revisions, and our paper is currently under review. The complete code and trained model weights will be made available upon acceptance.
 
 ## Built With
 
