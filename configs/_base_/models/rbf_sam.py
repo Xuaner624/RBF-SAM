@@ -59,7 +59,7 @@ model = dict(
 
 
 train_cfg = dict(
-    max_num=1,
+    max_num=150,
 )
 
 test_cfg = dict(
