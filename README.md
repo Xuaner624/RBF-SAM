@@ -1,8 +1,19 @@
-# RBF-SAM
+# RBF-SAM: Robust Building Footprint Extraction From Off-Nadir Remote Sensing Images via Segment Anything Model
 
-This is the implementation of the paper *RBF-SAM: Robust Building Footprint Extraction from Off-Nadir Remote Sensing Images via Segment Anything Model*.
+> **Yuxuan Li, Keming Chen, Zicheng Lei, Yating Yang, Jinsong Lv, and Zhi Zhou**
 
-> **Note:** This repository is undergoing revisions, and our paper is currently under review. The complete code and trained model weights will be made available upon acceptance.
+The code in this toolbox implements the "[RBF-SAM: Robust Building Footprint Extraction From Off-Nadir Remote Sensing Images via Segment Anything Model](https://doi.org/10.1109/TGRS.2026.3709903)".
+
+<div align="center">
+  <img src="images/motivation.png" alt="Motivation" />
+  <p><em>The motivation of our work: The prompt sensitivity of SAM-based methods for off-nadir building footprint extraction</em></p>
+</div>
+<br>
+
+<div align="center">
+  <img src="images/architecture.png" alt="Architecture" />
+  <p><em>The architecture of the proposed RBF-SAM</em></p>
+</div>
 
 ## Built With
 
@@ -36,7 +47,30 @@ Coming soon.
 
 Coming soon.
 
+## Citation
+
+Please kindly cite the papers if this code is useful and helpful for your research.
+
+Y. Li, K. Chen, Z. Lei, Y. Yang, J. Lv and Z. Zhou, "RBF-SAM: Robust Building Footprint Extraction From Off-Nadir Remote Sensing Images via Segment Anything Model," in IEEE Transactions on Geoscience and Remote Sensing, vol. 64, pp. 5631416-5631416, 2026, Art no. 5631416, doi: 10.1109/TGRS.2026.3709903.
+
+```bibtex
+@ARTICLE{11595002,
+  author={Li, Yuxuan and Chen, Keming and Lei, Zicheng and Yang, Yating and Lv, Jinsong and Zhou, Zhi},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={RBF-SAM: Robust Building Footprint Extraction From Off-Nadir Remote Sensing Images via Segment Anything Model}, 
+  year={2026},
+  volume={64},
+  number={},
+  pages={5631416-5631416},
+  keywords={Buildings;Modeling;Remote sensing;Modules (abstract algebra);Robustness;Conferences;Computers;Computer vision;Noise measurement;Grounding;Building footprint extraction;instance segmentation;model robustness;off-nadir remote sensing images;segment anything model (SAM)},
+  doi={10.1109/TGRS.2026.3709903}
+}
+```
 
 ## Contact
 
-Coming soon.
+**Yuxuan Li:** liyuxuan231@mails.ucas.ac.cn
+
+Yuxuan Li is with the Aerospace Information Research Institute, Chinese Academy of Sciences, 100094 Beijing, China.
+
+*Note: Since the codebase is built upon an earlier version of MMDetection and involves multiple file modifications, there might be some missing files or setup details. If you encounter any issues during implementation, please don't hesitate to reach out.*
