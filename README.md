@@ -6,7 +6,7 @@ The code in this toolbox implements the "[RBF-SAM: Robust Building Footprint Ext
 
 <div align="center">
   <img src="images/motivation.png" alt="Motivation" />
-  <p><em>The motivation of our work: The prompt sensitivity of SAM-based methods for off-nadir building footprint extraction</em></p>
+  <p><em>The motivation of our work: the prompt sensitivity of SAM-based methods for off-nadir building footprint extraction</em></p>
 </div>
 <br>
 
