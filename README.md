@@ -49,7 +49,7 @@ Coming soon.
 
 ## Citation
 
-Please kindly cite the papers if this code is useful and helpful for your research.
+**Please kindly cite the papers if this code is useful and helpful for your research.**
 
 Y. Li, K. Chen, Z. Lei, Y. Yang, J. Lv and Z. Zhou, "RBF-SAM: Robust Building Footprint Extraction From Off-Nadir Remote Sensing Images via Segment Anything Model," in IEEE Transactions on Geoscience and Remote Sensing, vol. 64, pp. 5631416-5631416, 2026, Art no. 5631416, doi: 10.1109/TGRS.2026.3709903.
 
