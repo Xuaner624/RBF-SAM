@@ -129,7 +129,7 @@ def _draw_boundary_offset(id, coco: COCO, save_dir=SAVE_PATH):
     cv2.imwrite(ospj(save_dir, img['file_name']), result)
 
 
-# python tools/visual_offset_bonai.py
+# python tools/visual_offset_huizhou.py
 if __name__ == '__main__':
     vis_boundary_offset('/root/autodl-tmp/RBF-SAM-main/results/rbf_sam_huizhou/rbf_sam_huizhou.json',
                         '/root/autodl-tmp/RBF-SAM-main/results/rbf_sam_huizhou_vis')
