@@ -40,12 +40,64 @@ Please refer to the `requirements.txt` file for the running environment of this 
 
 ## Model Checkpoints
 
-Coming soon.
+The trained model weights for RBF-SAM are now available. You can download them via Baidu Netdisk:
+
+* **Link:** [Baidu Netdisk (百度网盘)](https://pan.baidu.com/s/1vC_7cFpUh1JP9uim_QDJhA)
+* **Extraction Code:** `r285`
 
 
 ## Train & Test
 
-Coming soon.
+* Train on BONAI or OmniCity-view3 dataset:
+
+```bash
+bash tools/dist_train_rbf_sam_bonai.sh configs/rbf_sam/rbf_sam_bonai.py 4 --work-dir results/rbf_sam_bonai
+bash tools/dist_train_rbf_sam_omnicity.sh configs/rbf_sam/rbf_sam_omnicity.py 4 --work-dir results/rbf_sam_omnicity
+```
+* Inference on BONAI, OmniCity-view3, or Huizhou dataset:
+
+```bash
+python tools/test_rbf_sam_bonai.py --config configs/rbf_sam/rbf_sam_bonai.py
+python tools/test_rbf_sam_omnicity.py --config configs/rbf_sam/rbf_sam_omnicity.py
+python tools/test_rbf_sam_huizhou.py --config configs/rbf_sam/rbf_sam_huizhou.py
+```
+
+**Note:** Please set `samples_per_gpu = 1` while training and inferencing !!!
+
+* Evaluate the results:
+
+Inference outputs a JSON file (default prompt: `building_box`). Evaluate footprint and offset metrics as follows (e.g., BONAI):
+
+```bash
+python tools/analyse_footprint_coco_bonai.py
+python tools/analyse_offset_bonai.py
+```
+## Testing with Different Prompts
+
+To evaluate the model's robustness using different types of bounding box prompts (building box, roof box, footprint box, or noisy box), you need to manually modify the **`forward_test()`** function in **`mmdet/models/detectors/rbf_sam.py`**. 
+
+You must uncomment the corresponding lines in **TWO** places simultaneously:
+
+**1. Modify the return box:**
+Choose the prompt type you want to evaluate and uncomment the corresponding line:
+```python
+return_box_robust = deepcopy(gt_bboxes)                             # Default: building box
+# return_box_robust = deepcopy(gt_roof_bboxes)                      # Roof box
+# return_box_robust = deepcopy(gt_footprint_bboxes)                 # Footprint box
+# return_box_robust = [[deepcopy(gt_bboxes_perturb)]]               # Noisy box
+```
+
+**2. Modify the Prompt Encoder:**
+Ensure the `boxes` and `box_type` inputs match the box type you selected above (0 for building, 1 for roof, 2 for footprint, 3 for noisy):
+```python
+# ===== Remember to change this when selecting different box prompts! =====
+sparse_embeddings, dense_embeddings = self.prompt_encoder(
+    points=None,
+    boxes=gt_bboxes[0][0],  # Match the box variable (gt_bboxes[0][0], gt_roof_bboxes[0][0], gt_footprint_bboxes[0][0], or gt_bboxes_perturb)
+    masks=None,
+    box_type=0,             # Match the box_type (0, 1, 2, or 3)
+)
+```
 
 ## Citation
 
