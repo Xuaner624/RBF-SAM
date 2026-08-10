@@ -66,7 +66,7 @@ python tools/test_rbf_sam_huizhou.py --config configs/rbf_sam/rbf_sam_huizhou.py
 
 * Evaluate the results:
 
-Inference outputs a JSON file (default prompt: `building_box`). Evaluate footprint and offset metrics as follows (e.g., BONAI):
+Inference outputs a JSON file (default prompt: `building_box`). Evaluate footprint and offset metrics (e.g., BONAI):
 
 ```bash
 python tools/analyse_footprint_coco_bonai.py
