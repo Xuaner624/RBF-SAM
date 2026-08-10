@@ -72,6 +72,15 @@ Inference outputs a JSON file (default prompt: `building_box`). Evaluate footpri
 python tools/analyse_footprint_coco_bonai.py
 python tools/analyse_offset_bonai.py
 ```
+
+* Visualize the results:
+
+```bash
+python tools/visual_offset_bonai.py
+python tools/visual_offset_huizhou.py
+python tools/visual_offset_omnicity.py
+```
+
 ## Testing with Different Prompts
 
 To evaluate the model's robustness using different types of bounding box prompts (building box, roof box, footprint box, or noisy box), you need to manually modify the **`forward_test()`** function in **`mmdet/models/detectors/rbf_sam.py`**. 
